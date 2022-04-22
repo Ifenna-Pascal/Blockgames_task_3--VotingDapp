@@ -257,6 +257,6 @@ contract SimpleElection is AccessControl {
     event CandidateCreated(uint256 _candidateId, string _candidateName);
     event VoteForCandidate(uint256 _candidateId, uint256 _candidateVoteCount);
     event changedViewStatus(string _changed);
-    // error ElectionNotStarted();
-    // error ElectionHasEnded();
+    error ElectionNotStarted();
+    error ElectionHasEnded();
 }
